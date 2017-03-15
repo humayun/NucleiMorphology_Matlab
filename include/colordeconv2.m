@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Jun 2013
+%%
 % color colordeconv2 on 8-bit RGB image: returns H,E,R channels from an HE image
 % inputs: -path to he image
 %         -imagetype
