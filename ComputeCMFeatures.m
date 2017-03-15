@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Feb 2015
+%%
 function [ GLCMFeatures ] = ComputeCMFeatures( RGB, BW, NoOfChannels, GrayLevels, FeaturesPath, ImageName)
 %ComputeCMFeatures compute Co-occurrence features in seven color 
 %channels (Red, Green, Blue, HSV(V), Lab(L), H&E(H) and BR
