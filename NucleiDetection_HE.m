@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Feb 2015
+%%
 function [nucleiIndexes, BW] = NucleiDetection_HE( RGB, MinPixel, MaxPixel, choice, splitNuclei )
 
 % REGION OF INTEREST

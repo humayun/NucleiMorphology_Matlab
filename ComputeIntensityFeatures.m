@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Feb 2015
+%%
 function [ IntensityFeatures ] = ComputeIntensityFeatures( RGB, BW, NoOfChannels, FeaturesPath, ImageName)
 % ComputeIntensityFeatures compute intesnity features (Mean, Median, MAD,
 % Standard Deviation, Inter-Quantile Range, Skewness and Kurtosis in 

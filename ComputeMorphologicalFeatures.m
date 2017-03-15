@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Feb 2015
+%%
 function [MorphFeatures, NucleiCentroids] = ComputeMorphologicalFeatures( BW, FeaturePath, ImageName )
 %ComputeMorphologicalFeatures compute morphological features
 

@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Aug 2014
+%%
 function [ BR ] = ComputeBlueRatio( RGB )
 %ComputeBlueRatio compute BlueRatio of RGB image
 %   This function computes blueratio image from RGB image

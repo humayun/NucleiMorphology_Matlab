@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Feb 2015
+%%
 function [GraphFeatures_VD, GraphFeatures_DT] = ComputeGraphFeatures( BW, FeaturesPath, ImageName, SegPath, RGB)
     
     s = regionprops(logical(BW),'Centroid');
