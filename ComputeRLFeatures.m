@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Feb 2015
+%%
 function [ RLFeatures ] = ComputeRLFeatures( RGB, BW, NoOfChannels, GrayLevels, FeaturesPath, ImageName)
 %ComputeRLFeatures compute Run-Length features in seven color 
 %channels (Red, Green, Blue, HSV(V), Lab(L), H&E(H) and BR
