@@ -10,12 +10,19 @@ function [ IntensityFeatures ] = ComputeIntensityFeatures( RGB, BW, NoOfChannels
 % author: Humayun Irshad (12/2015)
 
 %%
-    nucleiStats = regionprops( BW, 'PixelIdxList' );
 
+    IntensityFeatures = struct( 'Min_GS',0,'Max_GS',0,'Mean_GS',0, ...
+                    'Median_GS',0,'MAD_GS',0,'SD_GS',0,'IQR_GS',0, ...
+                    'Skewness_GS',0,'Kurtosis_GS',0);
+    nucleiStats = regionprops( logical(BW), 'PixelIdxList' );
+    if(isempty(nucleiStats))
+        return;
+    end
+    
     GS_or_RGB = size(RGB,3);
     if (GS_or_RGB == 1)
-        IntensityFeatures = struct( ...
-          'Min_GS',0,'Max_GS',0,'Mean_GS',0,'Median_GS',0,'MAD_GS',0,'SD_GS',0,'IQR_GS',0, ...
+        IntensityFeatures = struct( 'Min_GS',0,'Max_GS',0,'Mean_GS',0, ...
+          'Median_GS',0,'MAD_GS',0,'SD_GS',0,'IQR_GS',0, ...
           'Skewness_GS',0,'Kurtosis_GS',0);
 
         for i = 1:numel(nucleiStats)

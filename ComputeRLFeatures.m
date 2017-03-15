@@ -11,7 +11,6 @@ function [ RLFeatures ] = ComputeRLFeatures( RGB, BW, NoOfChannels, GrayLevels, 
     bb = regionprops(L,'BoundingBox'); 
     bb = floor(cat(1,bb.BoundingBox));
 
-    RGB = uint8(256*mat2gray(RGB));
     GS_or_RGB = size(RGB,3);
     
     if (GS_or_RGB == 1)
@@ -19,6 +18,7 @@ function [ RLFeatures ] = ComputeRLFeatures( RGB, BW, NoOfChannels, GrayLevels, 
         'SRE_GS',0, 'LRE_GS',0, 'GLN_GS',0, 'RLN_GS',0, 'RP_GS',0, 'LGRE_GS',0,...
         'HGRE_GS',0, 'SRLGE_GS',0, 'SRHGE_GS',0, 'LRLGE_GS',0, 'LRHGE_GS',0);
 
+        RGB = uint8(256*mat2gray(RGB));
         for i = 1:num
             obj=RGB;
             obj(~(L==i)) = NaN;

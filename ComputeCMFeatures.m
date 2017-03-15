@@ -2,6 +2,7 @@ function [ GLCMFeatures ] = ComputeCMFeatures( RGB, BW, NoOfChannels, GrayLevels
 %ComputeCMFeatures compute Co-occurrence features in seven color 
 %channels (Red, Green, Blue, HSV(V), Lab(L), H&E(H) and BR
 %
+   
     if(nargin < 4)
         GrayLevels = 64;
     end
@@ -14,10 +15,12 @@ function [ GLCMFeatures ] = ComputeCMFeatures( RGB, BW, NoOfChannels, GrayLevels
     bb = regionprops(L,'BoundingBox'); 
     bb = floor(cat(1,bb.BoundingBox));
 
-    RGB = uint8(256*mat2gray(RGB));
     GS_or_RGB = size(RGB,3);
     
     if (GS_or_RGB == 1)
+        
+        RGB = uint8(256*mat2gray(RGB));
+        
         GLCMFeatures = struct( ...
         'Autocorrelation_GS',0, 'CorrelationP_GS',0, 'Contrast_GS',0, ...
         'ClusterShade_GS',0, 'ClusterProminence_GS',0, 'Energy_GS',0, ...
