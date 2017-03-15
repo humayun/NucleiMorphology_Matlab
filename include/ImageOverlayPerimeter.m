@@ -1,3 +1,7 @@
+%% 
+% Written by Humayun Irshad (humayun.irshad@gmail.com)
+% Feb 2015
+%%
 function [ overlay ] = ImageOverlayPerimeter( im, bw )
 %ImageOverlayBorder Summary of this function goes here
 %   Overlay image with perimeter of nuclei
