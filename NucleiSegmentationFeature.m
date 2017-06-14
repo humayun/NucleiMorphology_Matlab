@@ -42,7 +42,7 @@ function NucleiSegmentationFeature(ImagePath,ImageExt,Method,SplitNuclei,Resolut
 
 	%% Specify number of graylevels for feature extraction
 	if(nargin<6)
-		GrayLevels = 64;
+		GrayLevels = 256;
 	end
 	
 	%% Specify Channels for Feature Computation
