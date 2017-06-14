@@ -58,7 +58,7 @@ function NucleiSegmentationFeature(ImagePath,ImageExt,Method,SplitNuclei,Resolut
 		
 		% Nuclei Detection & Segmentation
 		[nucleiIndexes, BW] = NucleiDetection_HE(RGB, MinPixel, MaxPixel, Method, SplitNuclei);
-		imwrite(BW, strcat(SegPath,ImageName,'_BWary.png'));
+		imwrite(BW, strcat(SegPath,ImageName,'_Binary.png'));
 		
 		
 		if(length(nucleiIndexes) > 0)
